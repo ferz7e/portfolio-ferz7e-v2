@@ -1,7 +1,31 @@
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/ibm-plex-mono-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/ibm-plex-mono-500.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "IBM Plex Mono";
+  src: url("assets/fonts/ibm-plex-mono-600.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Escalas tipográficas compartidas */
 :root {
-  --hero-title-size: clamp(1.8rem, 4.35vw, 3.4rem);
-  --hero-subtitle-size: clamp(1.2rem, calc(var(--hero-title-size) / 2), 2.25rem);
+  --hero-title-size: clamp(1.45rem, 3.5vw, 2.75rem);
+  --hero-subtitle-size: clamp(1.2rem, 1.875vw, 1.475rem);
   --hero-link-size: calc(var(--hero-subtitle-size) / 2);
 }
 
@@ -18,13 +42,14 @@ body {
   min-height: 100vh;
   background-color: #fff;
   color: #000;
+  font-family: "IBM Plex Mono", monospace;
   line-height: 1.5;
 }
 
 /* Mantiene el azul clásico del navegador en links normales y visitados */
 a,
 a:visited {
-  color: #0000ee;
+  color: #334155;
 }
 
 /* Layout principal */
@@ -45,7 +70,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: fit-content;
+  width: min(100%, 580px);
   gap: 64px;
   padding-block: 64px;
 }
@@ -64,10 +89,10 @@ a:visited {
 .hero__heading-group {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
-  gap: 4px;
-  text-align: center;
+  gap: 16px;
+  text-align: start;
 }
 
 /* Jerarquía tipográfica del hero */
@@ -81,6 +106,7 @@ a:visited {
 
 .hero__subtitle {
   margin: 0;
+  margin-left: 2px;
   font-size: var(--hero-subtitle-size);
   font-weight: 500;
 }
@@ -88,6 +114,7 @@ a:visited {
 .hero__summary {
   width: min(100%, 26rem);
   margin: 0;
+  margin-left: 2px;
   font-size: var(--hero-link-size);
   font-weight: 600;
   line-height: 1.6;
@@ -97,7 +124,7 @@ a:visited {
 .hero__actions {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   width: 100%;
   gap: 32px;
 }
@@ -139,6 +166,7 @@ a:visited {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  list-style-type: decimal;
   margin: 0;
   padding-left: 1.1rem;
 }
@@ -174,8 +202,8 @@ a:visited {
 /* Ajuste mobile: tipografía más compacta y acciones apiladas */
 @media (max-width: 640px) {
   :root {
-    --hero-title-size: clamp(1.2rem, 5.25vw, 1.8rem);
-    --hero-subtitle-size: clamp(0.6rem, calc(var(--hero-title-size) / 2), 0.9rem);
+    --hero-title-size: clamp(1rem, 4.35vw, 1.45rem);
+    --hero-subtitle-size: clamp(0.6rem, 2.3vw, 0.775rem);
     --hero-link-size: var(--hero-subtitle-size);
   }
 
@@ -193,12 +221,12 @@ a:visited {
 
   .hero__actions {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0;
   }
 
   .hero__button {
     width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 }
