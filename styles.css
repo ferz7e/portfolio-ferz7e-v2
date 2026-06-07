@@ -24,11 +24,51 @@
 
 /* Escalas tipográficas compartidas */
 :root {
-  --hero-title-size: clamp(1.45rem, 3.5vw, 2.75rem);
-  --hero-subtitle-size: clamp(1.2rem, 1.875vw, 1.475rem);
-  --hero-link-size: calc(var(--hero-subtitle-size) / 2);
+  --hero-title-size: 1.65rem;
+  --hero-subtitle-size: 1.05rem;
+  --hero-link-size: 0.82rem;
+  --hero-stack-width: 100%;
+  --hero-padding-x: 20px;
+  --hero-padding-y: 48px;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
   --status-online: #22c55e;
   --status-offline: #ef4444;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --hero-title-size: 2rem;
+    --hero-subtitle-size: 1.18rem;
+    --hero-link-size: 0.88rem;
+    --hero-stack-width: 560px;
+    --hero-padding-x: 18px;
+    --hero-padding-y: 56px;
+    --space-xs: 0.55rem;
+    --space-sm: 0.8rem;
+    --space-md: 1.1rem;
+    --space-lg: 1.65rem;
+    --space-xl: 2.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --hero-title-size: 2.3rem;
+    --hero-subtitle-size: 1.28rem;
+    --hero-link-size: 0.9rem;
+    --hero-stack-width: 580px;
+    --hero-padding-x: 16px;
+    --hero-padding-y: 64px;
+    --space-xs: 0.6rem;
+    --space-sm: 0.85rem;
+    --space-md: 1.15rem;
+    --space-lg: 1.75rem;
+    --space-xl: 2.5rem;
+  }
 }
 
 /* Reset mínimo para layout consistente */
@@ -51,7 +91,7 @@ body {
 /* Mantiene el azul clásico del navegador en links normales y visitados */
 a,
 a:visited {
-  color: #334155;
+  color: #000;
 }
 
 /* Layout principal */
@@ -72,9 +112,10 @@ a:visited {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: min(100%, 580px);
-  gap: 1rem;
-  padding-block: 64px;
+  width: 100%;
+  max-width: var(--hero-stack-width);
+  gap: var(--space-xl);
+  padding-block: var(--hero-padding-y);
 }
 
 /* Bloque superior del home */
@@ -83,8 +124,8 @@ a:visited {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  padding-inline: 16px;
-  gap: 1rem;
+  padding-inline: var(--hero-padding-x);
+  gap: var(--space-md);
   text-align: left;
 }
 
@@ -93,7 +134,7 @@ a:visited {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  gap: 1rem;
+  gap: var(--space-sm);
   text-align: start;
 }
 
@@ -114,12 +155,17 @@ a:visited {
 }
 
 .hero__summary {
-  width: min(100%, 26rem);
+  width: 100%;
+  max-width: 26rem;
   margin: 0;
   margin-left: 2px;
   font-size: var(--hero-link-size);
   font-weight: 400;
   line-height: 1.6;
+}
+
+.projects > .hero__summary {
+  max-width: none;
 }
 
 /* Acciones principales */
@@ -128,7 +174,7 @@ a:visited {
   flex-wrap: wrap;
   justify-content: flex-start;
   width: 100%;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .hero__button {
@@ -152,7 +198,7 @@ a:visited {
 
 .hero__button-label {
   font-size: var(--hero-link-size);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 /* Listados de proyectos */
@@ -160,25 +206,55 @@ a:visited {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1rem;
-  padding-inline: 16px;
+  gap: var(--space-xl);
+  padding-inline: var(--hero-padding-x);
 }
 
 .projects {
   width: 100%;
 }
 
+.hero__stack > .projects {
+  padding-inline: var(--hero-padding-x);
+}
+
 .projects__title {
-  margin: 0 0 12px;
+  margin: 0;
   text-align: left;
   font-size: var(--hero-subtitle-size);
   font-weight: 500;
 }
 
+.projects__title + .projects__meta {
+  margin-top: var(--space-xs);
+}
+
+.projects__title + .hero__summary,
+.projects__title + .projects__list {
+  margin-top: var(--space-sm);
+}
+
+.hero__summary + .hero__summary {
+  margin-top: var(--space-sm);
+}
+
+.projects__meta + .projects__title,
+.hero__summary + .projects__title {
+  margin-top: var(--space-lg);
+}
+
+.projects__list + .projects__cta-group {
+  margin-top: var(--space-lg);
+}
+
+.projects__list + .projects__footer {
+  margin-top: var(--space-md);
+}
+
 .projects__list {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: var(--space-md);
   list-style-type: decimal;
   margin: 0;
   padding-left: 1.1rem;
@@ -190,16 +266,19 @@ a:visited {
 
 .projects__link {
   font-size: var(--hero-link-size);
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .project__status {
   margin: 0;
   display: inline-flex;
   align-items: center;
+  flex: 0 0 auto;
   gap: 0.45rem;
   font-size: var(--hero-link-size);
   font-weight: 400;
+  white-space: nowrap;
+  width: fit-content;
 }
 
 .projects__meta {
@@ -207,7 +286,7 @@ a:visited {
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  gap: var(--space-md);
 }
 
 .projects__meta .hero__summary,
@@ -235,18 +314,23 @@ a:visited {
   display: flex;
   justify-content: flex-end;
   width: 100%;
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .projects__cta-group {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 1rem;
-  padding-top: 1rem;
+  gap: var(--space-md);
+  padding-top: 0;
 }
 
 .projects__cta-group .hero__actions {
+  align-items: center;
+  justify-content: center;
+}
+
+.projects__cta-group .hero__button {
   justify-content: center;
 }
 
@@ -257,44 +341,17 @@ a:visited {
 
 .projects__more {
   font-size: var(--hero-link-size);
-  font-weight: 600;
+  font-weight: 400;
 }
 
-/* Ajuste intermedio: los links ganan presencia frente al subtítulo */
-@media (max-width: 960px) {
-  :root {
-    --hero-link-size: calc(var(--hero-subtitle-size) * 0.75);
-  }
-}
-
-/* Ajuste mobile: tipografía más compacta y acciones apiladas */
-@media (max-width: 640px) {
-  :root {
-    --hero-title-size: clamp(1rem, 4.35vw, 1.45rem);
-    --hero-subtitle-size: clamp(0.6rem, 2.3vw, 0.775rem);
-    --hero-link-size: var(--hero-subtitle-size);
-  }
-
-  .hero__inner {
-    padding: 18px;
-  }
-
-  .hero__stack {
-    width: 100%;
-  }
-
-  .hero__content {
-    width: 100%;
-  }
-
+@media (max-width: 767px) {
   .hero__actions {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: var(--space-sm);
   }
 
   .hero__button {
-    width: 100%;
     justify-content: flex-start;
   }
 }
