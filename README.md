@@ -1,44 +1,55 @@
 # portfolio-ferz7e-v2
 
-Landing personal minimalista construida con HTML y CSS puro.
+Portfolio personal de Fernando Zárate, orientado a desarrollo de software, infraestructura y soluciones tecnológicas aplicadas a operación y seguridad.
 
-La página funciona como una tarjeta de presentación rápida para rutear a perfiles clave:
+## Enfoque
 
-- GitHub
-- LinkedIn
-- Curriculum Vitae
+El sitio presenta un perfil de Desarrollador de Soluciones Tecnológicas, con experiencia en:
+
+- desarrollo de software,
+- infraestructura Linux y servicios self-hosted,
+- plataformas web,
+- sistemas operativos para empresas,
+- soluciones aplicadas a seguridad, administración y control de accesos.
 
 ## Stack
 
 - HTML5
 - CSS3
-- Google Fonts: `Quicksand`
+- IBM Plex Mono local
+- Assets estáticos en `assets/`
 
 ## Estructura
 
 ```text
 portfolio-ferz7e-v2/
 ├── assets/
-│   └── favicon.png
 ├── index.html
+├── proyectos.html
+├── proyecto-*.html
+├── robots.txt
+├── sitemap.xml
 ├── styles.css
 └── README.md
 ```
 
-## Qué incluye
+## Páginas principales
 
-- Hero centrado en pantalla
-- Nombre, ubicación y rol profesional
-- Enlaces principales a redes y CV
-- Favicon enlazado desde `assets/favicon.png`
-- Responsive design para desktop, tablet y mobile
-- Nomenclatura BEM en clases del hero
+- `index.html`: presentación, enlaces principales, desarrollo destacado y trayectoria.
+- `proyectos.html`: listado completo de desarrollo de software.
+- `proyecto-*.html`: páginas individuales de cada solución.
+
+## CV
+
+El botón Curriculum Vitae descarga:
+
+```text
+assets/soluciones-tek-fernando-zarate-cv.pdf
+```
 
 ## Cómo abrir el proyecto
 
-Podés abrir `index.html` directamente en el navegador o levantar un servidor local.
-
-Opción simple:
+Podés abrir `index.html` directamente en el navegador o levantar un servidor local:
 
 ```bash
 python3 -m http.server 8000
@@ -50,29 +61,6 @@ Después abrí:
 http://localhost:8000
 ```
 
-## Personalización rápida
+## SEO
 
-Contenido principal en [index.html](/Users/fernandozarate/Desktop/Código/portfolio-ferz7e-v2/index.html):
-
-- ubicación: `.hero__location`
-- nombre: `.hero__title`
-- rol: `.hero__subtitle`
-- enlaces: `.hero__button`
-
-Estilos principales en [styles.css](/Users/fernandozarate/Desktop/Código/portfolio-ferz7e-v2/styles.css):
-
-- colores base en `:root`
-- escalas tipográficas del hero
-- breakpoints de tablet y mobile
-
-## Enlaces actuales
-
-- GitHub: `https://github.com/ferz7e`
-- LinkedIn: `https://www.linkedin.com/in/ferz7e/`
-- CV: pendiente
-
-## Próximos pasos sugeridos
-
-- Reemplazar `href="#"` del CV por el archivo o enlace final
-- Ajustar metadata del `<head>` para SEO y social preview
-- Agregar una sección extra si más adelante querés mostrar proyectos
+El proyecto incluye metadata base, Open Graph, Twitter Card, JSON-LD, `robots.txt` y `sitemap.xml`.

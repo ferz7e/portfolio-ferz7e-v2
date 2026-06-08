@@ -26,6 +26,3 @@ temp/
 # Local environment files
 .env
 .env.*
-
-# Local notes
-NEXT_STEPS.md
