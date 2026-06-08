@@ -122,20 +122,20 @@ a:visited {
 .hero__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   padding-inline: var(--hero-padding-x);
   gap: var(--space-md);
-  text-align: left;
+  text-align: center;
 }
 
 .hero__heading-group {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   width: 100%;
   gap: var(--space-sm);
-  text-align: start;
+  text-align: center;
 }
 
 /* Jerarquía tipográfica del hero */
@@ -175,6 +175,10 @@ a:visited {
   justify-content: flex-start;
   width: 100%;
   gap: var(--space-md);
+}
+
+.hero__content .hero__actions {
+  justify-content: center;
 }
 
 .hero__button {
@@ -353,5 +357,13 @@ a:visited {
 
   .hero__button {
     justify-content: flex-start;
+  }
+
+  .hero__content .hero__actions {
+    align-items: center;
+  }
+
+  .hero__content .hero__button {
+    justify-content: center;
   }
 }
