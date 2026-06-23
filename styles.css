@@ -268,6 +268,14 @@ a:visited {
   font-size: var(--hero-link-size);
 }
 
+.projects__item-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: var(--space-md);
+}
+
 .projects__link {
   font-size: var(--hero-link-size);
   font-weight: 400;
@@ -365,5 +373,11 @@ a:visited {
 
   .hero__content .hero__button {
     justify-content: center;
+  }
+
+  .projects__item-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: var(--space-xs);
   }
 }

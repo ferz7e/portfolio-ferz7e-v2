@@ -1,16 +1,16 @@
 # portfolio-ferz7e-v2
 
-Portfolio personal de Fernando Zárate, orientado a desarrollo de software, infraestructura y soluciones tecnológicas aplicadas a operación y seguridad.
+Portfolio personal de Fernando Zárate, orientado a desarrollo de software, infraestructura y soluciones IT para seguridad física y electrónica.
 
 ## Enfoque
 
-El sitio presenta un perfil de Desarrollador de Soluciones Tecnológicas, con experiencia en:
+El sitio presenta un perfil de Desarrollador de Soluciones IT para Seguridad Física y Electrónica, con experiencia en:
 
 - desarrollo de software,
 - infraestructura Linux y servicios self-hosted,
 - plataformas web,
-- sistemas operativos para empresas,
-- soluciones aplicadas a seguridad, administración y control de accesos.
+- sistemas de gestión operativa para empresas,
+- soluciones aplicadas a seguridad física, seguridad electrónica, administración y control de accesos.
 
 ## Stack
 
@@ -25,7 +25,7 @@ El sitio presenta un perfil de Desarrollador de Soluciones Tecnológicas, con ex
 portfolio-ferz7e-v2/
 ├── assets/
 ├── index.html
-├── proyectos.html
+├── otros-desarrollos.html
 ├── proyecto-*.html
 ├── robots.txt
 ├── sitemap.xml
@@ -35,16 +35,16 @@ portfolio-ferz7e-v2/
 
 ## Páginas principales
 
-- `index.html`: presentación, enlaces principales, desarrollo destacado y trayectoria.
-- `proyectos.html`: listado completo de desarrollo de software.
-- `proyecto-*.html`: páginas individuales de cada solución.
+- `index.html`: presentación, enlaces principales, soluciones destacadas y trayectoria.
+- `otros-desarrollos.html`: desarrollos web y plataformas fuera del foco principal.
+- `proyecto-*.html`: páginas individuales de soluciones y otros desarrollos.
 
 ## CV
 
 El botón Curriculum Vitae descarga:
 
 ```text
-assets/soluciones-tek-fernando-zarate-cv.pdf
+assets/seg-it-fernandozarate.pdf
 ```
 
 ## Cómo abrir el proyecto
