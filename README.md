@@ -1,16 +1,17 @@
 # portfolio-ferz7e-v2
 
-Portfolio personal de Fernando Zárate, orientado a desarrollo de software, infraestructura y soluciones IT para seguridad física y electrónica.
+Portfolio personal de Fernando Zárate, Profesional IT con experiencia en desarrollo de software, infraestructura e integración de sistemas.
 
 ## Enfoque
 
-El sitio presenta un perfil de Desarrollador de Soluciones IT para Seguridad Física y Electrónica, con experiencia en:
+El sitio presenta un perfil de Profesional IT con experiencia en:
 
-- desarrollo de software,
+- desarrollo de software frontend y backend,
 - infraestructura Linux y servicios self-hosted,
-- plataformas web,
-- sistemas de gestión operativa para empresas,
-- soluciones aplicadas a seguridad física, seguridad electrónica, administración y control de accesos.
+- integración de APIs, bases de datos y plataformas,
+- redes y servicios web,
+- sistemas CCTV, seguridad electrónica y control de accesos,
+- soluciones para entornos operativos, industriales y de alta disponibilidad.
 
 ## Stack
 
@@ -26,7 +27,7 @@ portfolio-ferz7e-v2/
 ├── assets/
 ├── index.html
 ├── otros-desarrollos.html
-├── proyecto-*.html
+├── proyecto-ercoseguridad-sgi.html
 ├── robots.txt
 ├── sitemap.xml
 ├── styles.css
@@ -35,16 +36,16 @@ portfolio-ferz7e-v2/
 
 ## Páginas principales
 
-- `index.html`: presentación, enlaces principales, soluciones destacadas y trayectoria.
-- `otros-desarrollos.html`: desarrollos web y plataformas fuera del foco principal.
-- `proyecto-*.html`: páginas individuales de soluciones y otros desarrollos.
+- `index.html`: presentación, perfil, proyecto destacado, competencias y experiencia.
+- `otros-desarrollos.html`: proyectos web y productos digitales complementarios.
+- `proyecto-ercoseguridad-sgi.html`: caso principal de gestión operativa para seguridad.
 
 ## CV
 
 El botón Curriculum Vitae descarga:
 
 ```text
-assets/seg-it-fernandozarate.pdf
+assets/profesional-it-fernandozarate.pdf
 ```
 
 ## Cómo abrir el proyecto
